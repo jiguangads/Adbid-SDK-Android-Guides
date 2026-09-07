@@ -6,7 +6,7 @@ Adbid Android SDK 是移动广告聚合 SDK，帮助开发者快速集成多家�
 
 | 项目     | 值                           |
 | -------- | ---------------------------- |
-| 当前版本 | 1.0.0                        |
+| 当前版本 | 1.0.1                        |
 | 最低支持 | minSdk 23                    |
 | 目标编译 | compileSdk 34 / targetSdk 34 |
 | 产物格式 | AAR                          |
@@ -19,6 +19,7 @@ Adbid Android SDK 是移动广告聚合 SDK，帮助开发者快速集成多家�
 | 插屏广告     | `JInterstitialAd`  | 全屏/半屏插屏，含视频插屏                |
 | 激励视频广告 | `JRewardedVideoAd` | 用户完整观看后发放奖励                   |
 | 原生广告     | `JNativeAd`        | 支持模板渲染与自渲染两种模式             |
+| 开屏广告     | `JSplashAd`        | 预加载后由宿主在指定容器中显式展示       |
 
 ## 支持的广告源
 
@@ -45,13 +46,13 @@ SDK 通过适配器聚合以下主流广告平台：
 jadbid-android-sdk/
 ├── jadbid-android/
 │   ├── release/
-│   │   └── jadbid-android-1.0.0-release.aar   # SDK 主产物
+│   │   └── jadbid-android-1.0.1-release.aar   # SDK 主产物
 │   └── docs/
 │       ├── 集成说明文档.md                       # 集成导航入口
+│       ├── INTEGRATION_GUIDE_STANDARD.md        # 普通包完整集成指南
 │       └── API-接口说明.md                       # API 参考文档
 └── demo/
-    ├── jadbid-android-example/                  # Demo 源码工程
-    └── jadbid-android-example-1.0.0-source.zip  # Demo 压缩包
+    └── jadbid-android-example-1.0.1-source.zip  # Demo 源码压缩包
 ```
 
 ## 快速集成
@@ -177,11 +178,11 @@ manager.checkCurrentArea(context, new PrivacyRegionListener() {
 
 ## Demo 工程
 
-仓库包含完整的示例工程，覆盖所有广告类型的接入流程：
+仓库提供完整的示例工程压缩包，覆盖五类广告的接入流程：
 
-- **源码位置**：`demo/jadbid-android-example/`
+- **源码包**：`demo/jadbid-android-example-1.0.1-source.zip`
 - **模块**：`standard`（标准包接入方式）
-- **构建**：`./gradlew :standard:assembleDebug`
+- **构建**：解压后进入 `jadbid-android-example/`，执行 `./gradlew :standard:assembleDebug`
 
 Demo 中广告 ID 通过 `build.gradle` 的 `buildConfigField` 配置，可替换为你的正式 ID。
 
@@ -190,7 +191,16 @@ Demo 中广告 ID 通过 `build.gradle` 的 `buildConfigField` 配置，可替�
 | 文档                                                | 说明                  |
 | --------------------------------------------------- | --------------------- |
 | [集成说明文档](jadbid-android/docs/集成说明文档.md) | 集成导航与快速说明    |
+| [普通包集成指南](jadbid-android/docs/INTEGRATION_GUIDE_STANDARD.md) | 普通包完整接入步骤 |
 | [API 接口说明](jadbid-android/docs/API-接口说明.md) | 完整 API 参考与错误码 |
+
+## 版本更新
+
+### 1.0.1（2026-09-07）
+
+- 新增开屏广告 `JSplashAd`，支持预加载、就绪查询、显式容器展示和完整生命周期回调。
+- Demo 增加开屏广告示例，App ID 与广告位 ID 均通过 Gradle property 或同名环境变量注入。
+- 保持横幅、插屏、激励视频和原生广告的既有公开签名；普通包、公有云交付口径及最低 Android API 23 不变。
 
 ## 错误码
 
