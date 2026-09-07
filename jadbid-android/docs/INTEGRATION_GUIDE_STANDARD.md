@@ -1,4 +1,4 @@
-# JAdbid Android SDK 普通包集成指南
+# JAdbid Android SDK 集成指南
 
 ## 1. 环境要求
 

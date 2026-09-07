@@ -191,7 +191,7 @@ Demo 中广告 ID 通过 `build.gradle` 的 `buildConfigField` 配置，可替�
 | 文档                                                | 说明                  |
 | --------------------------------------------------- | --------------------- |
 | [集成说明文档](jadbid-android/docs/集成说明文档.md) | 集成导航与快速说明    |
-| [普通包集成指南](jadbid-android/docs/INTEGRATION_GUIDE_STANDARD.md) | 普通包完整接入步骤 |
+| [JAdbid Android SDK 集成指南](jadbid-android/docs/INTEGRATION_GUIDE_STANDARD.md) | 普通包完整接入步骤 |
 | [API 接口说明](jadbid-android/docs/API-接口说明.md) | 完整 API 参考与错误码 |
 
 ## 版本更新
