@@ -48,8 +48,8 @@ jadbid-android-sdk/
 │   ├── release/
 │   │   └── jadbid-android-1.0.1-release.aar   # SDK 主产物
 │   └── docs/
-│       ├── 集成说明文档.md                       # 集成导航入口
-│       ├── INTEGRATION_GUIDE_STANDARD.md        # 普通包完整集成指南
+│       ├── JAdbid Android SDK 集成总览.md        # 集成导航入口
+│       ├── JAdbid Android SDK 集成指南.md        # 普通包完整集成指南
 │       └── API-接口说明.md                       # API 参考文档
 └── demo/
     └── jadbid-android-example-1.0.1-source.zip  # Demo 源码压缩包
@@ -190,8 +190,8 @@ Demo 中广告 ID 通过 `build.gradle` 的 `buildConfigField` 配置，可替�
 
 | 文档                                                | 说明                  |
 | --------------------------------------------------- | --------------------- |
-| [集成说明文档](jadbid-android/docs/集成说明文档.md) | 集成导航与快速说明    |
-| [JAdbid Android SDK 集成指南](jadbid-android/docs/INTEGRATION_GUIDE_STANDARD.md) | 普通包完整接入步骤 |
+| [JAdbid Android SDK 集成总览](jadbid-android/docs/JAdbid%20Android%20SDK%20集成总览.md) | 集成导航与快速说明    |
+| [JAdbid Android SDK 集成指南](jadbid-android/docs/JAdbid%20Android%20SDK%20集成指南.md) | 普通包完整接入步骤 |
 | [API 接口说明](jadbid-android/docs/API-接口说明.md) | 完整 API 参考与错误码 |
 
 ## 版本更新
